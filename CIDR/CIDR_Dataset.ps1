@@ -1,7 +1,8 @@
 # Parameters
 $GitHubUrl   = "https://raw.githubusercontent.com/X4BNet/lists_vpn/refs/heads/main/output/vpn/ipv4.txt"
+#$GitHubUrl   = "https://raw.githubusercontent.com/X4BNet/lists_vpn/refs/heads/main/output/datacenter/ipv4.txt" # Includes datacenter virtual machine hosts, and consumer vpns.
 #$GitHubUrl   = "https://raw.githubusercontent.com/jeffriechers/Random-Powershell-Scripts/refs/heads/main/Subnettest.txt" # Text file with overlapping subnets for testing.
-$OutputDir   = "C:\NetScalerDatasets"
+$OutputDir   = ".\NetScalerDatasets"
 $BaseName = "VPNBlocklist"
 $ChunkSize   = 5000
 
