@@ -1,3 +1,4 @@
+Thanks to https://github.com/X4BNet/lists_vpn for creating and maintaining these lists.
 
 ## CIDRtoRange_Dataset.ps1
 PowerShell script to download a CIDR text file from github and convert it into a Ranged NetScaler dataset format.  Default is set to pull from X4BNet for VPN providers ip ranges.  It breaks the output into 5000 line maximum text files in a copy and paste format to create and populate the datasets.
