@@ -3,9 +3,9 @@ PowerShell script to download a CIDR text file containing all the subnets for co
 ## How to use - Build your own updated version
 - Sign up for a MaxMind account, and download either the country or city csv.
 - Using the NetScaler Console or Console Service deploy the ZIP file to a NetScaler.
-- WINSCP into the NetScaler instance and download the converted CSV from \var\netscaler\locdb\Citrix_Netscaler_InBuilt_GeoIP_DB_<uploaddate>.csv
+- WINSCP into the NetScaler instance and download the converted CSV from \var\netscaler\locdb\Citrix_Netscaler_InBuilt_GeoIP_DB_-uploaddate-.csv
 - Download the CustomGeoBuild.ps1 to your machine.
-- From PowerShell run .\CustomGeoBuild.ps1 Citrix_Netscaler_InBuilt_GeoIP_DB_<uploaddate>.csv
+- From PowerShell run .\CustomGeoBuild.ps1 Citrix_Netscaler_InBuilt_GeoIP_DB_-uploaddate-.csv
 
 If you downloaded the City Database, this process will run for ~1 hour.  For the Country Database it will run for ~15 minutes.
 - Upload the new CustomGeoIP.csv directly to your NetScalers under \var\netscaler\locdb with WINSCP
