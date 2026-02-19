@@ -6,9 +6,13 @@ PowerShell script to download a CIDR text file containing all the subnets for co
 - WINSCP into the NetScaler instance and download the converted CSV from \var\netscaler\locdb\Citrix_Netscaler_InBuilt_GeoIP_DB_<uploaddate>.csv
 - Download the CustomGeoBuild.ps1 to your machine.
 - From PowerShell run .\CustomGeoBuild.ps1 Citrix_Netscaler_InBuilt_GeoIP_DB_<uploaddate>.csv
+
 If you downloaded the City Database, this process will run for ~1 hour.  For the Country Database it will run for ~15 minutes.
-- Upload the new CuistomGeoIP.csv directly to your NetScalers as the new location database
-Working with Citrix Support on this, as pushing a custom CSV doesn't currently work from NetScaler Console.
+- Upload the new CustomGeoIP.csv directly to your NetScalers under \var\netscaler\locdb with WINSCP
+- From the NetScaler web console select this new database as the location database.  At this time pushing a custom CSV from NetScaler Console does not work.
+
+Working with Citrix Support on this, as pushing a custom CSV should work.
+
 - Create a custom Message Action and Responder to look for the custom continent code.
 ```
 add audit messageaction VPNBLOCKLIST WARNING "CLIENT.IP.SRC + \" was dropped because they are listed in the new VPN and VPS Blocking Method\"" -logtoNewnslog YES
