@@ -1,3 +1,5 @@
+Thanks to https://github.com/X4BNet/lists_vpn for creating and maintaining these lists.
+
 PowerShell script to download a CIDR text file containing all the subnets for commercial VPN and VPS providers from github, and then process it through a NetScaler GeoIP Location CSV.  Where it finds items in the CSV that are listed in the downloaded CIDR file it replaces the Continent entry with a custom VPN entry.  You then can create a Responder Policy to match that VPN Continent value to flag or drop traffic accessing from those subnets.  This process is faster matching and processing than analyzing 9 datasets for matching IPs.
 
 ## How to use - Build your own updated version
