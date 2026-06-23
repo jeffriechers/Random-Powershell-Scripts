@@ -97,6 +97,10 @@ klist purge
 
 ### 8. On your AD Connect server create a schedule task to run every 5 minutes to execute the following in powershell.
 
+This is necessary as the Entra Cloud Sync Agent currently only supports user and group changes, and does Delta updates every 2 minutes.
+
+Once it supports Device Syncing as well for Hybrid Join, then this scheduled task will no longer be required, and you can replace it and Entra Connect with Entra Cloud Sync.
+
 ```
 Start-ADSyncSyncCycle -PolicyType Delta
 ```
